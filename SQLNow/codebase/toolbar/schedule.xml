@@ -1,0 +1,6 @@
+﻿<toolbar>
+  <item id="info" type="text" text= ""/>
+  <item id="spacer1" type="spacer"/>
+ 
+  <item id="Refresh" type="button" img="fa fa-refresh" imgdis="fa fa-refresh" text="Neu laden"  action="refreshSchedule" title="Ansicht neu laden"/>
+</toolbar>

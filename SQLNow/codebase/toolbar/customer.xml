@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolbar>
+  <item id="info" type="text" text=""/>
+  <item id="spacer1" type="spacer"/>
+  <item id="group"   type="button" img="fa-solid fa-object-group"   imgdis="fa-solid fa-object-group"   text="Group"    action="groupCustomer"    title="Gruppieren"/>
+  <item id="ungroup" type="button" img="fa-solid fa-object-ungroup" imgdis="fa-solid fa-object-ungroup" text="UnGroup"  action="ungroupCustomer"  title="Gruppierung aufheben"/>
+  <item id="collapse" type="button" img="fa-solid fa-angle-up"      imgdis="fa-solid fa-angle-up"       text="Collapse" action="CollapseCustomer" title="Schliessen"/>
+  <item id="expand"   type="button" img="fa-solid fa-angle-down"    imgdis="fa-solid fa-angle-down"     text="Expand"   action="ExpandCustomer"   title="Oeffnen"/>
+  <item id="sep1" type="separator"/>
+  <item id="Refresh" type="button" img="fa-solid fa-rotate"         imgdis="fa-solid fa-rotate"         text="Neu laden" action="loadCustomers"   title="Liste neu laden"/>
+</toolbar>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolbar>
+  <item id="info" type="text" text=""/>
+  <item id="spacer1" type="spacer"/>
+  <item id="Copy"   type="button" img="fa-solid fa-print"      imgdis="fa-solid fa-print"      text="Print"     action="DoOnCopy"         title="SQL-Server-Liste drucken"/>
+  <item id="Export" type="button" img="fa-solid fa-file-arrow-down" imgdis="fa-solid fa-file-arrow-down" text="Export" action="DoOnExport" title="Excel-Export"/>
+  <item id="sep1" type="separator"/>
+  <item id="Refresh" type="button" img="fa-solid fa-rotate"   imgdis="fa-solid fa-rotate"     text="Neu laden" action="FillSQLServerlist" title="Liste neu laden"/>
+</toolbar>

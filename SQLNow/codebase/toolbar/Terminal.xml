@@ -1,0 +1,9 @@
+﻿<toolbar>
+  <item id="info" type="text" text= ""/>
+  <item id="spacer1" type="spacer"/>
+  <item id="New" type="button" img="fa fa-file-o" imgdis="fa fa-file-o" text="Neu" action="doOnNewTerminal"/>
+  <item id="sep2" type="separator"/>
+  <item id="Delete" type="button" img="fa fa-remove" imgdis="fa fa-remove" text="Löschen"  action="doOnDeleteTerminal"/>
+  <item id="sep3" type="separator"/>
+
+</toolbar>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<menu absolutePosition="auto" mode="popup" maxItems="8">
+    <MenuItem name="File" id="1" width="30" >
+    <MenuItem name="New" id="2"/>
+    <MenuItem name="Open" id="3"/>
+    <MenuItem name="Edit with Notepad" id="4"/>
+    <MenuItem name="Save As..." id="5"/>
+    <divider id="6"/>
+    <MenuItem name="Page Setup..." id="7"/>
+    <MenuItem name="Print..." id="8"/>
+    <MenuItem name="Print Preview..." id="9"/>
+    <divider id="10"/>
+    <MenuItem name="Properties" id="properties"/>
+    <MenuItem name="Close" id="close"/>
+  </MenuItem>
+
+    
+</menu>

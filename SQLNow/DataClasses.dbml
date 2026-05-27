@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="FSQL" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="dbo.Customer" Member="Customer">
+    <Type Name="Customer">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NameLong" Type="System.String" DbType="NVarChar(120)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(120)" CanBeNull="true" />
+      <Column Name="Zip" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(120)" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(1024)" CanBeNull="true" />
+      <Column Name="Domains" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Computers" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Installations" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CustomerDomain" Member="CustomerDomain">
+    <Type Name="CustomerDomain">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CustomerName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DomainDnsName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="JumpServer1" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="JumpServer2" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="JumpServer3" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="JumpServer4" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(1024)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ManagedEntityType" Member="ManagedEntityType">
+    <Type Name="ManagedEntityType">
+      <Column Name="ManagedEntityTypeRowId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ManagedEntityTypeSystemName" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ManagedEntityTypeSQLId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ManagedEntityTypeDBS" Member="ManagedEntityTypeDBS">
+    <Type Name="ManagedEntityTypeDBS">
+      <Column Name="ManagedEntityTypeRowId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ManagedEntityTypeGuid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="ManagementPackRowId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ManagedEntityTypeSystemName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="ManagedEntityTypeDefaultName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="ManagedEntityTypeDefaultDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProductVersion" Member="ProductVersion">
+    <Type Name="ProductVersion">
+      <Column Name="productversion" Member="productversion1" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="sqlversion" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SQLComputer" Member="SQLComputer">
+    <Type Name="SQLComputer">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ManagedEntityRowId" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DisplayName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="DNSName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="DomainDnsName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="IPAddress" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="LogicalProcessors" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NetbiosComputerName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="NetworkName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="OrganizationalUnit" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="PhysicalProcessors" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PrincipalName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="SQLCustomer" Type="System.String" DbType="VarChar(250)" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="SQLMandant" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="SQLMonitoringType" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="Virtual_Server_Type" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="VirtualMachineName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="Modified" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Insterted" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="UpDateDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="IsSCOM" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="NotFoundSince" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="NotFoundSinceDays" Type="System.Int32" DbType="Int" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SQLDatabases" Member="SQLDatabases">
+    <Type Name="SQLDatabases">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ManagedEntityRowId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="TopLevelHostManagedEntityRowId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Collation" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DatabaseAutogrow" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DatabaseName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="LogAutogrow" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Owner" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="RecoveryModel" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Updateability" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="UserAccess" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="NotFoundSince" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="NotFoundSinceDays" Type="System.Int32" DbType="Int" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Modified" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SQLInstallType" Member="SQLInstallType">
+    <Type Name="SQLInstallType">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Type" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SQLServer" Member="SQLServer">
+    <Type Name="SQLServer">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ManagedEntityRowId" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TopLevelHostManagedEntityRowId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="SQLMandantName" Type="System.String" DbType="VarChar(250)" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Path" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Account" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="AgentClusterName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="AgentName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="AuditLevel" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="AuthenticationMode" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="Cluster" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="ConnectionString" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="DisplayName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="Domain" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="Edition" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="EnableErrorReporting" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="ErrorLogLocation" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="FullTextSearchServiceClusterName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="FullTextSearchServiceName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="InstallPath" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="InstanceID" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="InstanceName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="Language" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="MasterDatabaseLocation" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="MasterDatabaseLogLocation" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="PrincipalName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="ReplicationDistributionDatabase" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="ReplicationWorkingDirectory" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="ServiceClusterName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="ServiceName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="ServicePackVersion" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="TcpPort" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="ToolsPath" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="Type" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="Version" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="VersionNr" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Modified" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Insterted" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="IsSCOM" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="NotFoundSince" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="NotFoundSinceDay" Type="System.Int32" DbType="Int" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vDatabases" Member="vDatabases">
+    <Type Name="vDatabases">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="symbol" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="ManagedEntityRowId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="TopLevelHostManagedEntityRowId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Path" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DisplayName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ManagedEntityTypeRowId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Collation" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DatabaseAutogrow" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DatabaseName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="LogAutogrow" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Owner" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="RecoveryModel" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Updateability" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="UserAccess" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="NotFoundSince" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="NotFoundSinceDays" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Modified" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="PrincipalName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="InstanceName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

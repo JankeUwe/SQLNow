@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolbar>
+  <item id="info" type="text" text=""/>
+  <item id="spacer1" type="spacer"/>
+  <item id="New"     type="button" img="fa-solid fa-plus"    imgdis="fa-solid fa-plus"    text="Neu"        action="stammdatenNew"    title="Neuen Datensatz anlegen"/>
+  <item id="Edit"    type="button" img="fa-solid fa-pen"     imgdis="fa-solid fa-pen"     text="Bearbeiten" action="stammdatenEdit"   title="Datensatz bearbeiten"/>
+  <item id="Delete"  type="button" img="fa-solid fa-trash"   imgdis="fa-solid fa-trash"   text="Loeschen"   action="stammdatenDelete" title="Datensatz loeschen"/>
+  <item id="sep1" type="separator"/>
+  <item id="Refresh" type="button" img="fa-solid fa-rotate"  imgdis="fa-solid fa-rotate"  text="Neu laden"  action="stammdatenRefresh" title="Liste neu laden"/>
+</toolbar>

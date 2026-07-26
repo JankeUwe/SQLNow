@@ -6,7 +6,7 @@
 
 For icon support in SQLNow grids.
 
-### Fix: FITS logo replaced with dtcSoftware logo
+### Fix: legacy logo replaced with dtcSoftware logo
 
 In the loading screen.
 
